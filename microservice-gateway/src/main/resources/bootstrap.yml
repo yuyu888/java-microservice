@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: gateway-service
+  # 环境 dev|test|prod
+  profiles:
+    active: dev
+  # nacos服务发现，配合pom中 spring-cloud-starter-alibaba-nacos-discovery
+  cloud:
+    nacos:
+      # nacos 配置中心
+      config:
+        server-addr: 10.130.80.35:8848
+        file-extension: yaml # 配置文件后缀名
+        namespace: dev-rong_env
+#        namespace: ${spring.profiles.active}_env
+#        shared-configs[0]:
+#          data-id: shared-common.yaml
+#          refresh: true
+      # nacos 服务发现
+      discovery:
+        server-addr: 10.130.80.35:8848
+        cluster-name: BJ # 配置集群名字
+        namespace: dev-rong_env
+#        namespace: ${spring.profiles.active}_env
