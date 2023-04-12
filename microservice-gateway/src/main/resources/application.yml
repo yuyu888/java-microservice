@@ -3,15 +3,16 @@ server:
 
 spring:
   application:
-    name: gateway-service
+    name: gatewayservice
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true # gateway 可以从 nacos 发现微服务
       routes:
-        - id: test-service
-          uri: lb://test-service
+        - id: testservice
+          uri: lb://testservice
+#          uri: http://localhost:8201
           predicates:
             - Path=/test-service/**
 #      default-filters: # 全局过滤器

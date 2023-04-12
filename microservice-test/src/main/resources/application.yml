@@ -8,7 +8,7 @@ config-test: 1112
 
 spring:
   application:
-    name: test-service
+    name: testservice
   # 环境 dev|test|prod
   profiles:
     active: dev
@@ -20,9 +20,6 @@ spring:
       max-file-size: 100MB
       max-request-size: 100MB
       enabled: true
-  mongodb:
-    mytest:
-      uri: mongodb://root:hec_it@10.130.147.130:27017/he_budget?authSource=admin
   cloud:
     nacos:
       discovery:

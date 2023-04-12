@@ -21,13 +21,13 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-            <version>2.1.0.RELEASE</version>
+            <version>2.2.7.RELEASE</version>
         </dependency>
         <!-- nacos服务发现客户端依赖，如果添加了这个服务发现的starter依赖，那么application.yml中必须配置 cloud.nacos.discovery.server-addr，否则启动失败 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-            <version>2.1.0.RELEASE</version>
+            <version>2.2.7.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>2.0.0.RELEASE</version>
+            <version>3.0.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-context -->
         <dependency>
