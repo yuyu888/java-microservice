@@ -9,7 +9,9 @@ import com.myproject.common.utils.Query;
 import com.myproject.datesource.annotation.DataSource;
 import com.myproject.models.testservice.dao.LogDao;
 import com.myproject.models.testservice.entity.LogEntity;
+import com.myproject.models.testservice.form.LogPageForm;
 import com.myproject.models.testservice.service.LogService;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
@@ -33,6 +35,22 @@ public class LogServiceImpl extends ServiceImpl<LogDao, LogEntity> implements Lo
 //        PageUtils pageData = new PageUtils(page);
 //        List<UserPrizeRecordsEntity> newlist = (List<UserPrizeRecordsEntity>) pageData.getList();
 //        return new PageUtils(newlist, pageData.getTotalCount(), pageData.getPageSize(), pageData.getCurrPage());
+    }
+
+    @Override
+    public PageUtils queryPage(LogPageForm pageForm) {
+
+        LogEntity entity = new LogEntity();
+        QueryWrapper<LogEntity> queryWrapper = new QueryWrapper<>(entity);
+        //需要倒序的时候，放开下面的注释，并使用合适的排序字段
+        queryWrapper.orderByDesc("id");
+
+        IPage<LogEntity> page = this.page(
+                new Query<LogEntity>().getPage(pageForm.getPageMap()),
+                queryWrapper
+        );
+
+        return new PageUtils(page);
     }
 
     @Override
