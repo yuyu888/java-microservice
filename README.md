@@ -42,6 +42,7 @@ spring:
 5、 修改src/main/resources/banner.txt里面的内容
  
 6、修改父工程的 pom文件新增 microservice-user模块
+
 `````
 <modules>
      <module>microservice-test</module>
@@ -54,4 +55,4 @@ spring:
 
 7、修改：src/main/java/com/myproject/demoservice 和src/main/java/com/myproject/models/demoservice 目录名， 在更新maven后， 修改目录名会自动更新包名
 
-8、修改microservice-gateway/src/main/resources/application.yml 文件， 添加 routes 
+8、修改microservice-gateway/src/main/resources/application.yml 文件， 添加 routes
