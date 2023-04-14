@@ -15,6 +15,11 @@ spring:
 #          uri: http://localhost:8201
           predicates:
             - Path=/test-service/**
+        - id: demoservice
+          uri: lb://demoservice
+          #          uri: http://localhost:8201
+          predicates:
+            - Path=/demo-service/**
 #      default-filters: # 全局过滤器
 #        - AddRequestHeader=Truth, Global is Ok！
       globalcors: # 全局的跨域处理

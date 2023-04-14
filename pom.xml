@@ -7,7 +7,7 @@
 <modules>
     <module>microservice-test</module>
     <module>microservice-gateway</module>
-<!--    <module>microservice-demo</module>-->
+    <module>microservice-demo</module>
 </modules>
 <parent>
     <groupId>org.springframework.boot</groupId>
