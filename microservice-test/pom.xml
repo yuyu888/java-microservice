@@ -170,4 +170,30 @@
 			</plugin>
 		</plugins>
 	</build>
+<!--	<build>-->
+<!--		<plugins>-->
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--				<version>${spring-boot.version}</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<goals>-->
+<!--							<goal>repackage</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--				<configuration>-->
+<!--					<fork>true</fork>-->
+<!--					<includeSystemScope>true</includeSystemScope>-->
+<!--					<executable>false</executable>-->
+<!--					<finalName>${project.artifactId}-${spring-boot.version}</finalName>-->
+<!--&lt;!&ndash;							 指定目录 &ndash;&gt;-->
+<!--						<outputDirectory>${user.dir}/target</outputDirectory>-->
+<!--					&lt;!&ndash; <finalName>app</finalName>-->
+<!--                    <outputDirectory>${project.build.directory}</outputDirectory> &ndash;&gt;-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+<!--		</plugins>-->
+<!--	</build>-->
 </project>
