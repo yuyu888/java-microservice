@@ -20,4 +20,9 @@ public class TestController {
         return R.ok().put("data","hello word");
     }
 
+    @RequestMapping("/feignapi-test")
+    public String feignApiTest(){
+        return "this is a feignapi test";
+    }
+
 }
